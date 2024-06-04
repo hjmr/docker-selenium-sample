@@ -16,5 +16,5 @@ time.sleep(5)
 driver.save_screenshot("google_search_screenshot.png")
 results = driver.find_elements(By.XPATH, '//div[@class="g"]/*/*/*/*/*/*/h3')
 for element in results:
-    print(element.tag_name, element.text)
+    print(element.tag_name, element.get_attribute('innerHTML'))
 driver.quit()
